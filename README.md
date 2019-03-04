@@ -18,9 +18,6 @@ I prefer to use NGINX over Apache HTTPd.
 ## inotify + nginx + supervisord
 This modified version of SecondCrack will leverage NGINX reverse proxy, inotify-tools, and supervisord to automatically monitor your Second Crack's path for any changes including in `drafts/*` folder. This way, once a file is added or changed it will automatically update the site. 
 
-## Robots.txt
-I added a `robots.txt` template from Jonas Jacek's [robots](https://github.com/jonasjacek/robots.txt) project.
-
 ## Pushover
 Integrated [Pushover](https://pushover.net)'s API to the `update.sh` to send a notification once page it updated. This will be update in [Second Crack](https://github.com/wbtf/secondcrack) repo.
 
