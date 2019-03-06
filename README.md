@@ -7,10 +7,10 @@ Second Crack requires PHP 5.3+ and was tested on Mac OS X and CentOS 5.5, with A
 The docker image contain all PHP dependencies.
 
 ### Build
-`$ docker build -t secondcrack:v1 .`
+`$ docker build -t secondcrack:<version> .`
 
 ### Run
-`$ docker run -i -t -v /tmp/secondcrack:/home/secondcrack -p 80:80 secondcrack:v1`
+`$ docker run -i -t -v <local secondcrack path>:/home/secondcrack -p 80:80 secondcrack:<version>`
 
 ## NGINX
 I prefer to use NGINX over Apache HTTPd. 
