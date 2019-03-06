@@ -8,7 +8,7 @@ ENV TIMEZONE America/Toronto
 # Update and installation of packages
 RUN apk update && \
     apk upgrade && \
-	apk add --update tzdata && \
+    apk add --update tzdata && \
     cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
     echo "${TIMEZONE}" > /etc/timezone && \
 	apk add --no-cache \
@@ -55,7 +55,7 @@ RUN mkdir -p /home/secondcrack
 COPY php.ini.secondcrack /etc/php7/php.ini 
 
 # For nginx
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY nginx_default.conf /etc/nginx/conf.d/default.conf
 RUN mkdir -p /run/nginx
 RUN touch /var/log/nginx/access.log && touch /var/log/nginx/error.log
 RUN mkdir -p /etc/service/nginx
